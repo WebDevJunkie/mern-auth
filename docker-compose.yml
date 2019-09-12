@@ -18,9 +18,9 @@ services:
     environment:
       - REACT_APP_PORT=${REACT_APP_PORT}
     expose:
-      - 4000
+      - ${REACT_APP_PORT}
     ports:
-      - 4000:${REACT_APP_PORT}
+      - ${REACT_APP_PORT}:3000
     links:
       - api
     command: npm run start
