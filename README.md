@@ -12,7 +12,23 @@ To run this project you will need to install docker. There are two Dockerfiles o
 
 ### Installing
 
-Pull down project and run the following command at the root directory of the project:
+Pull down project and add a .env file at the root and in the api directory with the following variables:
+
+```
+/.env
+API_HOST="http://localhost:5000/"
+APP_SERVER_PORT=5000
+REACT_APP_PORT=3000
+```
+
+```
+/api/.env
+DB_CONNECTION_STRING={YOUR CONNECTION STRING}
+```
+
+I created a free mongo db on https://www.mongodb.com/. You can follow the instructions there.
+
+Run the following command at the root directory of the project:
 
 ```
 docker-compose build
